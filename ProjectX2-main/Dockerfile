@@ -24,7 +24,7 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/CodeIntelligenceTestin
 # Provide your repository link below
 RUN git clone https://github.com/laurilako/silver-palm-tree.git
 
-WORKDIR /ProjectX/ProjectX2
+WORKDIR /ProjectX
 RUN ls -a
 
-CMD ["sh", "-c", "cifuzz run test:test --use-sandbox=false > /ProjectX/ProjectX2/fuzzing.log 2>&1 && cat /ProjectX/ProjectX2/fuzzing.log"]
+CMD ["sh", "-c", "cifuzz run test:test --use-sandbox=false > /ProjectX/fuzzing.log 2>&1 && cat /ProjectX/fuzzing.log"]
