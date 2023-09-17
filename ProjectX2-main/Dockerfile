@@ -22,7 +22,7 @@ RUN bazel --version
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/CodeIntelligenceTesting/cifuzz/main/install.sh)"
 
 # Provide your repository link below
-RUN ssh git clone https://github.com/laurilako/silver-palm-tree.git
+RUN git clone https://github.com/laurilako/silver-palm-tree.git
 
 WORKDIR /ProjectX/ProjectX2
 RUN ls -a
