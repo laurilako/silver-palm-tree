@@ -23,4 +23,4 @@ jobs:
     
         - name: Run Docker Container
           run: |
-            docker run -it fuzzing-container bin/bash
+            docker run fuzzing-container bin/bash
