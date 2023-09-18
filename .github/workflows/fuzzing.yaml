@@ -6,6 +6,8 @@ on:
       - main
       
   pull_request:
+    branches:
+      - main
 
 jobs:
   fuzzing:
@@ -18,9 +20,7 @@ jobs:
         - name: Build Docker
           run: |
             docker build -t fuzzing-container -f ./ProjectX2-main/Dockerfile .
-          working-directory: ${{ github.workspace }}
     
         - name: Run Docker Container
           run: |
             docker run fuzzing-container
-          working-directory: ${{ github.workspace }}
