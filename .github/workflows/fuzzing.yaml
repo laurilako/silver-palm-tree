@@ -19,8 +19,8 @@ jobs:
     
         - name: Build Docker
           run: |
-            docker build -t fuzzing-container -f ./ProjectX2-main/Dockerfile .
+            docker build -t fuzzing-container -f ./ProjectX2/Dockerfile .
     
         - name: Run Docker Container
           run: |
-            docker run fuzzing-container
+            docker run -it fuzzing-container bin/bash
