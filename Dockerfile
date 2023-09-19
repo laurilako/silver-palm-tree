@@ -4,6 +4,8 @@ FROM ubuntu:latest
 #Default directory
 WORKDIR /ProjectX
 
+
+
 RUN apt-get update && \
     apt-get install -y --no-install-recommends python3 git curl clang llvm lcov default-jdk zip && \
     apt-get clean && \
@@ -19,7 +21,7 @@ RUN bazel --version
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/CodeIntelligenceTesting/cifuzz/main/install.sh)"
 
-# Provide your repository link below
+#Provide your repository link below
 RUN git clone https://github.com/laurilako/silver-palm-tree.git
 
 WORKDIR /ProjectX/ProjectX2
